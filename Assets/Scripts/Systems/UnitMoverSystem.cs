@@ -1,10 +1,8 @@
 using Unity.Burst;
 using Unity.Entities;
-using Unity.Jobs;
 using Unity.Mathematics;
 using Unity.Physics;
 using Unity.Transforms;
-using UnityEngine;
 
 partial struct UnitMoverSystem : ISystem
 {
