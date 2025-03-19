@@ -153,12 +153,13 @@ public class UnitSelectionManager : MonoBehaviour
             return positionArray;
         }
 
-        float ringSize = 2f;
+        float ringSize = 2.2f;
         int ring = 0;
         int positionIndex = 1;
         while (positionIndex < positionCount)
         {
-            int ringPositionCount = 3 + ring * 2;
+            int ringPositionCount = 4 + ring * 3; 
+                
             for (int i = 0; i < ringPositionCount; i++)
             {
                 float angle = i * (math.PI2 / ringPositionCount);
