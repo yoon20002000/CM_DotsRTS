@@ -88,14 +88,14 @@ public class UnitSelectionManager : MonoBehaviour
                     Filter = new CollisionFilter
                     {
                         BelongsTo = ~0u,
-                        CollidesWith = (uint)1 << LayerMask.NameToLayer("Units"),
+                        CollidesWith = GameAssets.Instance.GetUnitLayer(),
                         GroupIndex = 0,
                     }
                 };
                 
                 if (collisionWorld.CastRay(raycastInput, out Unity.Physics.RaycastHit raycastHit))
                 {
-                    if (entityManager.HasComponent<Selected>(raycastHit.Entity))
+                    if (entityManager.HasComponent<Unit>(raycastHit.Entity) && entityManager.HasComponent<Selected>(raycastHit.Entity))
                     {
                         Selected selected = entityManager.GetComponentData<Selected>(raycastHit.Entity);
                         selected.onSelected = true;

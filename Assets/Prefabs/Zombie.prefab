@@ -28,6 +28,14 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3236526945538039998, guid: 9d5126d12dddf5244bd9adf0144ff6f8, type: 3}
+      propertyPath: timerMax
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3236526945538039998, guid: 9d5126d12dddf5244bd9adf0144ff6f8, type: 3}
+      propertyPath: findTargetRange
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4323908152918029757, guid: 9d5126d12dddf5244bd9adf0144ff6f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
