@@ -18,11 +18,11 @@ partial struct TestSystem : ISystem
         // int unitCount = 0;
         // foreach ((
         //              RefRW<LocalTransform> localTransform, 
-        //              RefRO<UnitMover> unitMover,
+        //              RefRO<Zombie> unitMover,
         //              RefRW<PhysicsVelocity> physicsVelocity)
         //          in SystemAPI.Query<RefRW<LocalTransform>, 
-        //              RefRO<UnitMover>, 
-        //              RefRW<PhysicsVelocity>>().WithPresent<Selected>())
+        //              RefRO<Zombie>, 
+        //              RefRW<PhysicsVelocity>>())
         // {
         //     ++unitCount;
         // }
