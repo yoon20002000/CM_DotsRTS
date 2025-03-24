@@ -7,7 +7,7 @@ partial struct ResetTargetSystem : ISystem
     [BurstCompile]
     public void OnUpdate(ref SystemState state)
     {
-        foreach (RefRW<Target> target in SystemAPI.Query<RefRW<Target>>())
+        foreach (RefRW<Target> target in SystemAPI.Query<RefRW<Target>>().WithPresent<FindTarget>())
         {
             if (SystemAPI.Exists(target.ValueRO.targetEntity))
             {

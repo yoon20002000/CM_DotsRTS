@@ -3,14 +3,16 @@ using UnityEngine;
 
 public class TargetAuthoring : MonoBehaviour
 {
-    private class Baker : Baker<TargetAuthoring>
+    public GameObject targetGameObject;
+    
+    public class Baker : Baker<TargetAuthoring>
     {
         public override void Bake(TargetAuthoring authoring)
         {
             Entity entity = GetEntity(authoring, TransformUsageFlags.Dynamic);
             AddComponent(entity, new Target
             {
-                
+                targetEntity =  GetEntity(authoring.targetGameObject, TransformUsageFlags.Dynamic),
             });
         }
     }
