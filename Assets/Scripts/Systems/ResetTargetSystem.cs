@@ -1,17 +1,22 @@
 using Unity.Burst;
 using Unity.Entities;
+using Unity.Transforms;
 
-[UpdateInGroup(typeof(LateSimulationSystemGroup))]
+[UpdateInGroup(typeof(SimulationSystemGroup), OrderFirst = true)]
 partial struct ResetTargetSystem : ISystem
 {
     [BurstCompile]
     public void OnUpdate(ref SystemState state)
     {
-        foreach (RefRW<Target> target in SystemAPI.Query<RefRW<Target>>().WithPresent<FindTarget>())
+        foreach (RefRW<Target> target in SystemAPI.Query<RefRW<Target>>())
         {
-            if (SystemAPI.Exists(target.ValueRO.targetEntity))
+            if (target.ValueRW.targetEntity != Entity.Null)
             {
-                target.ValueRW.targetEntity = Entity.Null;
+                if (SystemAPI.Exists(target.ValueRO.targetEntity) == false ||
+                    SystemAPI.HasComponent<LocalTransform>(target.ValueRO.targetEntity) == false)
+                {
+                    target.ValueRW.targetEntity = Entity.Null;
+                }
             }
         }
     }
