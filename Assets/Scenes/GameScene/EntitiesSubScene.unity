@@ -650,6 +650,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerMax: 1.5
+  distanceMin: 3
+  distanceMax: 6
 --- !u!4 &1506088252
 Transform:
   m_ObjectHideFlags: 0
