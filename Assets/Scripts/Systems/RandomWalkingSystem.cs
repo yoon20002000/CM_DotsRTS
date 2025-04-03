@@ -21,7 +21,6 @@ partial struct RandomWalkingSystem : ISystem
 
                 randomWalking.ValueRW.targetPosition = randomWalking.ValueRO.originPosition + randomDirection * random.NextFloat(randomWalking.ValueRO.distanceMin, randomWalking.ValueRO.distanceMax);
                 randomWalking.ValueRW.random = random;
-                UnityEngine.Debug.Log(randomWalking.ValueRO.targetPosition);
             }
             else
             {
