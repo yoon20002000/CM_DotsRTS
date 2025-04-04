@@ -1,4 +1,5 @@
 using Unity.Entities;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class ShootAttackAuthoring : MonoBehaviour
@@ -24,4 +25,11 @@ public struct ShootAttack : IComponentData
     public float timer;
     public float timerMax;
     public int damageAmount;
+    public OnShootEvent onShoot;
+
+    public struct OnShootEvent
+    {
+        public bool isTriggered;
+        public float3 shootFromPosition;
+    }
 }
