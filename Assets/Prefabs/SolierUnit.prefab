@@ -86,6 +86,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &4274090139952413301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1109983800595883292}
+  m_Layer: 6
+  m_Name: BulletSpawnPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1109983800595883292
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4274090139952413301}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.278, y: 1.924, z: 1.985}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6281172192742508176}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &7722177315674960685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -108,7 +139,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3236526945538039998, guid: 9d5126d12dddf5244bd9adf0144ff6f8, type: 3}
       propertyPath: findTargetRange
-      value: 7
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4323908152918029757, guid: 9d5126d12dddf5244bd9adf0144ff6f8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -156,6 +187,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4323908152918029757, guid: 9d5126d12dddf5244bd9adf0144ff6f8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3512442136040514127}
+    - targetCorrespondingSourceObject: {fileID: 4323908152918029757, guid: 9d5126d12dddf5244bd9adf0144ff6f8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1109983800595883292}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2867236240787317393, guid: 9d5126d12dddf5244bd9adf0144ff6f8, type: 3}
       insertIndex: -1
@@ -212,6 +246,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerMax: 0.2
   damageAmount: 5
+  attackDistance: 13
+  bulletSpawnLocalTransform: {fileID: 1109983800595883292}
 --- !u!4 &6281172192742508176 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4323908152918029757, guid: 9d5126d12dddf5244bd9adf0144ff6f8, type: 3}
